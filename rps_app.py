@@ -9,7 +9,7 @@ import numpy as np
 import streamlit as st
 import tensorflow as tf
 from PIL import Image, ImageOps
-
+from tensorflow.keras.models import load_model
 def import_and_predict(image_data, model):
     
         size = (75,75)    
@@ -25,8 +25,11 @@ def import_and_predict(image_data, model):
         return prediction
 
 
+# Model saved with Keras model.save()
+MODEL_PATH ='model.h5'
 
-model = tf.tensorflow.keras.models.load_model('my_model.hdf5')
+# Load your trained model
+model = load_model(MODEL_PATH)
 
 st.write("""
          # Rock-Paper-Scissor Hand Sign Prediction
