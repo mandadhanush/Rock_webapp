@@ -26,7 +26,7 @@ def import_and_predict(image_data, model):
 
 
 # Model saved with Keras model.save()
-MODEL_PATH ='model.h5'
+MODEL_PATH ='model_resnet50.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
